@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Games | GeekVerse</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo">⚡ Geek<span>Verse</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="games.html" class="active">Games</a></li>
+        <li><a href="filmes.html">Filmes & Séries</a></li>
+        <li><a href="animes.html">Animes & Mangás</a></li>
+        <li><a href="curiosidades.html">Curiosidades</a></li>
+        <li><a href="cadastro.html">Cadastro</a></li>
+        <li><button id="theme-toggle" class="theme-btn">☀️ Mudar Tema</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2 class="section-title">Mundo dos Games</h2>
+
+    <!-- Seção de filtro dinâmico -->
+    <div class="filter-bar">
+      <span>Filtrar por plataforma:</span>
+      <button class="btn btn-secondary filter-btn active" data-filter="all">Todos</button>
+      <button class="btn btn-secondary filter-btn" data-filter="pc">PC</button>
+      <button class="btn btn-secondary filter-btn" data-filter="console">Consoles</button>
+      <button class="btn btn-secondary filter-btn" data-filter="mobile">Mobile</button>
+    </div>
+
+    <div class="card-grid">
+
+      <article class="card game-card" data-category="pc console">
+        <img src="https://picsum.photos/400/250?random=10" alt="RPG">
+        <div class="card-body">
+          <span class="card-tag">RPG</span>
+          <h3 class="card-title">Evolução dos RPGs Eletrônicos</h3>
+          <p class="card-text">De gráficos em texto no terminal até mundos hiper-realistas e abertos com tomada de decisão complexa.</p>
+          <div class="card-meta">
+            <span>Plataforma: PC / Console</span>
+          </div>
+          <a href="#" class="btn" style="margin-top:1rem;">Ler Artigo</a>
+        </div>
+      </article>
+
+      <article class="card game-card" data-category="pc">
+        <img src="https://picsum.photos/400/250?random=11" alt="eSports">
+        <div class="card-body">
+          <span class="card-tag">eSports</span>
+          <h3 class="card-title">Cenário Competitivo Global</h3>
+          <p class="card-text">As principais equipes, táticas e campeonatos globais do momento em destaque no cenário pro.</p>
+          <div class="card-meta">
+            <span>Plataforma: PC</span>
+          </div>
+          <a href="#" class="btn" style="margin-top:1rem;">Ler Artigo</a>
+        </div>
+      </article>
+
+      <article class="card game-card" data-category="mobile">
+        <img src="https://picsum.photos/400/250?random=12" alt="Mobile Gaming">
+        <div class="card-body">
+          <span class="card-tag">Mobile</span>
+          <h3 class="card-title">A Revolução dos Jogos de Bolso</h3>
+          <p class="card-text">Como os smartphones se tornaram uma das plataformas mais rentáveis e competitivas da indústria.</p>
+          <div class="card-meta">
+            <span>Plataforma: Mobile</span>
+          </div>
+          <a href="#" class="btn" style="margin-top:1rem;">Ler Artigo</a>
+        </div>
+      </article>
+
+      <article class="card game-card" data-category="pc console">
+        <img src="https://picsum.photos/400/250?random=13" alt="Indie Games">
+        <div class="card-body">
+          <span class="card-tag">Indie</span>
+          <h3 class="card-title">Pérolas do Desenvolvimento Independente</h3>
+          <p class="card-text">Estúdios pequenos que criaram verdadeiras obras de arte com orçamentos reduzidos.</p>
+          <div class="card-meta">
+            <span>Plataforma: PC / Console</span>
+          </div>
+          <a href="#" class="btn" style="margin-top:1rem;">Ler Artigo</a>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-brand">
+        <h3>⚡ GeekVerse</h3>
+        <p>O seu portal completo sobre cultura geek, games e tecnologia.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="games.html">Games</a></li>
+          <li><a href="filmes.html">Filmes & Séries</a></li>
+          <li><a href="animes.html">Animes & Mangás</a></li>
+          <li><a href="curiosidades.html">Curiosidades</a></li>
+          <li><a href="cadastro.html">Cadastro</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 GeekVerse — Projeto de Front-End Executado Localmente.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

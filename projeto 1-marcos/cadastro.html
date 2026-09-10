@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro | GeekVerse</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo">⚡ Geek<span>Verse</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="games.html">Games</a></li>
+        <li><a href="filmes.html">Filmes & Séries</a></li>
+        <li><a href="animes.html">Animes & Mangás</a></li>
+        <li><a href="curiosidades.html">Curiosidades</a></li>
+        <li><a href="cadastro.html" class="active">Cadastro</a></li>
+        <li><button id="theme-toggle" class="theme-btn">☀️ Mudar Tema</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="form-container">
+      <h2 class="section-title">Cadastre-se no GeekVerse</h2>
+      <p style="margin-bottom: 1.5rem; color: var(--text-muted);">
+        Junte-se à nossa comunidade geek local. Este formulário está pronto para conexão ao banco de dados remoto MySQL.
+      </p>
+
+      <form id="cad-form">
+        <div class="form-group">
+          <label for="nome">Nome de Usuário</label>
+          <input type="text" id="nome" name="nome" placeholder="Ex: CyberSamurai" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="categoria">Categoria Favorita</label>
+          <select id="categoria" name="categoria">
+            <option value="games">Games</option>
+            <option value="filmes">Filmes & Séries</option>
+            <option value="animes">Animes & Mangás</option>
+            <option value="rpg">RPG & HQs</option>
+            <option value="tecnologia">Tecnologia</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="mensagem">Biografia / Interesses (Opcional)</label>
+          <textarea id="mensagem" name="mensagem" rows="4" style="width: 100%; padding: 0.75rem; border-radius: 4px; border: 1px solid var(--border-color); background: var(--bg-color); color: var(--text-color);" placeholder="Conte um pouco sobre quais jogos ou animes você curte..."></textarea>
+        </div>
+
+        <button type="submit" class="btn" style="width: 100%;">Finalizar Cadastro</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-brand">
+        <h3>⚡ GeekVerse</h3>
+        <p>O seu portal completo sobre cultura geek, games e tecnologia.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="games.html">Games</a></li>
+          <li><a href="filmes.html">Filmes & Séries</a></li>
+          <li><a href="animes.html">Animes & Mangás</a></li>
+          <li><a href="curiosidades.html">Curiosidades</a></li>
+          <li><a href="cadastro.html">Cadastro</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 GeekVerse — Projeto de Front-End Executado Localmente.</p>
+    </div>
+  </footer>
+
+  <!-- 
+    ===================================================================
+    CONFIGURAÇÃO DE CONEXÃO COM BANCO DE DADOS REMOTO (LINUX / MYSQL)
+    ===================================================================
+    Como o navegador (Front-End) não se conecta de forma direta ao MySQL,
+    esta estrutura em PHP (ou Node.js) deve ser colocada no servidor
+    quando os dados forem fornecidos pelo seu colega de grupo:
+
+    $db_host    = "192.168.X.X";      // <--- IP DA MÁQUINA VIRTUAL LINUX
+    $db_port    = "3306";             // <--- PORTA PADRÃO DO MYSQL
+    $db_user    = "usuario_amigo";    // <--- NOME DE USUÁRIO DO BANCO
+    $db_pass    = "senha_banco";      // <--- SENHA DO BANCO
+    $db_name    = "nome_do_banco";    // <--- NOME DO BANCO DE DADOS
+    $db_table   = "usuarios";         // <--- NOME DA TABELA
+    ===================================================================
+  -->
+
+  <script src="js/script.js"></script>
+</body>
+</html>
