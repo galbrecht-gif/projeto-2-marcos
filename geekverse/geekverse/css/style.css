@@ -1,0 +1,157 @@
+/* ===== GeekVerse — Identidade visual ===== */
+:root{
+  --roxo:#6C3BF4;
+  --ciano:#00E5FF;
+  --magenta:#FF2E88;
+  --fundo:#0D0B1F;
+  --superficie:#171233;
+  --texto:#F5F5FA;
+  --texto-suave:#B9B4D8;
+  --borda:rgba(255,255,255,.10);
+  --radius:16px;
+  --sombra:0 10px 30px rgba(0,0,0,.35);
+}
+
+/* Tema claro */
+body.light{
+  --fundo:#F5F5FA;
+  --superficie:#FFFFFF;
+  --texto:#171233;
+  --texto-suave:#5B5680;
+  --borda:rgba(23,18,51,.12);
+  --sombra:0 10px 30px rgba(23,18,51,.10);
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Segoe UI",Tahoma,Verdana,sans-serif;
+  background:var(--fundo);
+  color:var(--texto);
+  line-height:1.6;
+  transition:background .3s ease,color .3s ease;
+}
+.container{width:min(1120px,92%);margin:0 auto}
+a{text-decoration:none;color:inherit}
+
+/* ===== Botões ===== */
+.btn{
+  display:inline-block;border:none;cursor:pointer;font-weight:700;
+  padding:12px 24px;border-radius:999px;font-size:.95rem;
+  transition:transform .2s ease,box-shadow .2s ease,opacity .2s;
+}
+.btn:hover{transform:translateY(-2px)}
+.btn--primary{background:linear-gradient(90deg,var(--roxo),var(--magenta));color:#fff;box-shadow:0 8px 24px rgba(108,59,244,.4)}
+.btn--ghost{background:transparent;border:1px solid var(--borda);color:var(--texto);padding:8px 16px}
+.btn--small{padding:8px 18px;background:transparent;border:1px solid var(--ciano);color:var(--ciano)}
+.btn--small:hover{background:var(--ciano);color:#0D0B1F}
+
+/* ===== Header ===== */
+.header{
+  position:sticky;top:0;z-index:50;
+  background:color-mix(in srgb,var(--fundo) 85%,transparent);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--borda);
+}
+.header__inner{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
+.logo{display:flex;align-items:center;gap:10px}
+.logo__mark{
+  width:38px;height:38px;display:grid;place-items:center;border-radius:12px;
+  background:linear-gradient(135deg,var(--roxo),var(--ciano));color:#fff;font-weight:900;
+}
+.logo__text{font-size:1.25rem;font-weight:900;letter-spacing:.5px}
+.logo__text span{color:var(--ciano)}
+.nav{display:flex;align-items:center;gap:18px}
+.nav a{font-size:.95rem;color:var(--texto-suave);transition:color .2s}
+.nav a:hover{color:var(--ciano)}
+.nav-toggle{display:none;background:none;border:none;color:var(--texto);font-size:1.6rem;cursor:pointer}
+
+/* ===== Hero ===== */
+.hero{position:relative;overflow:hidden;padding:110px 0 90px;text-align:center}
+.hero__glow{
+  position:absolute;inset:auto;top:-140px;left:50%;transform:translateX(-50%);
+  width:620px;height:620px;border-radius:50%;
+  background:radial-gradient(circle,rgba(108,59,244,.45),transparent 65%);
+  z-index:0;pointer-events:none;
+}
+.hero__inner{position:relative;z-index:1}
+.hero__tag{color:var(--ciano);font-family:monospace;letter-spacing:2px;margin-bottom:12px}
+.hero__title{font-size:clamp(2.2rem,6vw,4rem);font-weight:900;line-height:1.1}
+.hero__text{max-width:620px;margin:18px auto 30px;color:var(--texto-suave);font-size:1.1rem}
+
+/* ===== Seções ===== */
+.section{padding:80px 0}
+.section--alt{background:var(--superficie)}
+.section__title{font-size:clamp(1.7rem,4vw,2.4rem);font-weight:900;text-align:center}
+.section__sub{text-align:center;color:var(--texto-suave);margin-bottom:40px}
+
+.grid{display:grid;gap:24px}
+.grid--4{grid-template-columns:repeat(4,1fr)}
+.grid--3{grid-template-columns:repeat(3,1fr)}
+
+/* Categorias */
+.cat{
+  background:var(--superficie);border:1px solid var(--borda);border-radius:var(--radius);
+  padding:28px 22px;text-align:center;transition:transform .25s,border-color .25s;
+}
+.section--alt .cat{background:var(--fundo)}
+.cat:hover{transform:translateY(-6px);border-color:var(--ciano)}
+.cat__icon{font-size:2.4rem;margin-bottom:10px}
+.cat h3{margin-bottom:8px}
+.cat p{color:var(--texto-suave);font-size:.95rem}
+
+/* Cards */
+.card{
+  background:var(--fundo);border:1px solid var(--borda);border-radius:var(--radius);
+  overflow:hidden;box-shadow:var(--sombra);transition:transform .25s;
+}
+.card:hover{transform:translateY(-6px)}
+.card__img{height:150px;display:grid;place-items:center;font-size:3rem}
+.card__img--1{background:linear-gradient(135deg,#6C3BF4,#00E5FF)}
+.card__img--2{background:linear-gradient(135deg,#FF2E88,#6C3BF4)}
+.card__img--3{background:linear-gradient(135deg,#00E5FF,#FF2E88)}
+.card__img--4{background:linear-gradient(135deg,#6C3BF4,#171233)}
+.card__img--5{background:linear-gradient(135deg,#00E5FF,#6C3BF4)}
+.card__img--6{background:linear-gradient(135deg,#FF2E88,#00E5FF)}
+.card__body{padding:20px}
+.card__body h3{margin-bottom:8px}
+.card__body p{color:var(--texto-suave);font-size:.95rem;margin-bottom:16px}
+
+/* Você sabia */
+.fact{
+  background:var(--superficie);border-left:4px solid var(--magenta);
+  border-radius:12px;padding:22px;
+}
+.fact span{display:block;font-size:1.4rem;font-weight:900;color:var(--ciano);margin-bottom:6px}
+.random{
+  margin-top:40px;text-align:center;padding:32px 22px;border-radius:var(--radius);
+  border:1px dashed var(--ciano);background:var(--superficie);
+}
+#randomText{font-size:1.1rem;margin-bottom:20px;min-height:56px}
+
+/* Footer */
+.footer{background:var(--superficie);border-top:1px solid var(--borda);padding:50px 0 20px}
+.footer__inner{display:grid;grid-template-columns:2fr 1fr 1fr;gap:30px}
+.footer p,.footer h4{color:var(--texto-suave);font-size:.95rem}
+.footer h4{color:var(--texto);margin-bottom:8px}
+.footer__copy{text-align:center;margin-top:30px;color:var(--texto-suave);font-size:.85rem}
+
+/* ===== Responsividade ===== */
+@media (max-width:900px){
+  .grid--4{grid-template-columns:repeat(2,1fr)}
+  .grid--3{grid-template-columns:repeat(2,1fr)}
+  .footer__inner{grid-template-columns:1fr 1fr}
+}
+@media (max-width:640px){
+  .nav-toggle{display:block}
+  .nav{
+    display:none;position:absolute;top:100%;left:0;right:0;
+    flex-direction:column;align-items:flex-start;gap:14px;padding:18px 6%;
+    background:var(--superficie);border-bottom:1px solid var(--borda);
+  }
+  .nav.open{display:flex}
+  .grid--4,.grid--3{grid-template-columns:1fr}
+  .footer__inner{grid-template-columns:1fr}
+  .hero{padding:70px 0 60px}
+  .section{padding:60px 0}
+}
